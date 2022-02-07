@@ -9,10 +9,10 @@ else
 Console.Write(" нечётное");*/
 
 Console.Write("Введите число: ");
-string numberStr = Console.ReadLine();
-int number = int.Parse(numberStr);
+string numberString = Console.ReadLine();
+int number = int.Parse(numberString);
 
 if (number % 2 == 0)
 Console.WriteLine("Данное число чётное!");
 else
-Console.Write("Данное число нечётное!");
+Console.WriteLine("Данное число нечётное!");
