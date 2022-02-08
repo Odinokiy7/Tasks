@@ -1,14 +1,14 @@
-﻿// Даны два числа. Показать большее и меньшее число.
+﻿// Даны два числа. Показать большее и меньшее число
 
-int number1 = 35;
-int number2 = 53;
- if (number1 > number2)
- {
-     Console.WriteLine("Большее число: " + number1);
-     Console.WriteLine("Меньшее число: " + number2);
- }
- else
- {
-     Console.WriteLine("Меньшее число: " + number1);
-     Console.WriteLine("Большее число: " + number2);
- }
+Console.Write("Введите первое число: ");
+string numberA = Console.ReadLine();
+int number1 = int.Parse(numberA);
+
+Console.Write("Введите второе число: ");
+string numberB = Console.ReadLine();
+int number2 = int.Parse(numberB);
+
+if (number1 > number2)
+    Console.Write($"{number1} больше, чем {number2}");
+else
+    Console.Write($"{number2} больше, чем {number1}");
