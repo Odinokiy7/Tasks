@@ -1,11 +1,17 @@
 ﻿// Найти максимальное из трех чисел.
 
-int a = 54;
-int b = 89;
-int c = 73;
-Console.WriteLine($"Даны три числа: {a}, {b}, {c}");
+int GetRandom()
+{
+    int number = new Random().Next(0, 1000);
+    return number;
+}
+
+int a = GetRandom();
+int b = GetRandom();
+int c = GetRandom();
+Console.WriteLine($"Даны числа: {a}, {b}, {c}");
 
 int max = a;
 if (b > max) max = b;
 if (c > max) max = c;
-Console.WriteLine("Максимальное число: " + max);
+Console.WriteLine($"Максимальное из них: {max}");
