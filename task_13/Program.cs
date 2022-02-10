@@ -1,35 +1,34 @@
-﻿// Выяснить, кратно ли число заданному, если нет, вывести остаток   
-int GetNumber()
+﻿// Выяснить, кратно ли число заданному, если нет, вывести остаток
 
+int GetRandomNumber()
 {
-    int rundomNumber = new Random().Next(20, 100);
-    return rundomNumber;
+    int randomNumber = new Random().Next(20, 100);
+    return randomNumber;
 }
 
-void IsMultiple(int firstNumber, int secondNumber)
+int number = GetRandomNumber();
+Console.WriteLine($"Первое число: {number}");
+
+int secondNumber = GetRandomNumber();
+Console.WriteLine($"Второе число: {secondNumber}");
+
+IsMultiple(number, secondNumber);
+void IsMultiple(int number, int secondNumber)
 {
-    if (firstNumber > secondNumber) 
+    if (number > secondNumber)
     {
-        int result = firstNumber % secondNumber;
+        int result = number % secondNumber;
         if (result == 0)
-            Console.WriteLine("Первое число кратно второму ");
+            Console.WriteLine($"{number} кратно {secondNumber}");
         else
-        Console.WriteLine($"Остаток: {result} ");
+            Console.WriteLine($"{number} % {secondNumber} = остаток {result}");
     }
     else
     {
-        int result = secondNumber % firstNumber;
+        int result = secondNumber % number;
         if (result == 0)
-            Console.WriteLine("Второе число кратно первому ");
+            Console.WriteLine($"{secondNumber} кратно {number}");
         else
-        Console.WriteLine($"Остаток: {result}");
+            Console.WriteLine($"{secondNumber} % {number} = остаток {result}");
     }
 }
-
-int number = GetNumber();
-Console.WriteLine($"Первое случайное число: {number}");
-
-int secondNumber = GetNumber();
-Console.WriteLine($"Второе случайное число: {secondNumber}");
-IsMultiple(number, secondNumber);
-
