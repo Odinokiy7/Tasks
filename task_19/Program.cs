@@ -21,7 +21,9 @@ void Method(int x, int y)
         Console.WriteLine("Точка в III четверти");
     else if (x > 0 && y < 0)
         Console.WriteLine("Точка в IV четверти");
-    else
+    else if (x == 0 && y == 0)
         Console.WriteLine("Точка в начале координат");
+    else
+        Console.WriteLine("Невозможно определить четверть");
 }
 Method(x, y);
