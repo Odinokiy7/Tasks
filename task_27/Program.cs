@@ -1,6 +1,6 @@
 ﻿// 27. Определить количество цифр в числе
 
-int number = new Random().Next(10, 100000);
+int number = new Random().Next(1, 999999);
 Console.WriteLine($"Дано число: {number}");
 
 int count = 0;
