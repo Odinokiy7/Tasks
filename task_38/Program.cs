@@ -6,15 +6,15 @@ int[] massiv = new int[10];
 Random number = new Random();
 
 Console.Write("Дан массив: ");
-void FillArray(int[] arr)
+void FillArray()
 {
-    for (int index = 0; index < arr.Length; index++)
+    for (int index = 0; index < massiv.Length; index++)
     {
-        arr[index] = number.Next(1, 10);
-        Console.Write($"{arr[index]} ");
+        massiv[index] = number.Next(1, 10);
+        Console.Write($"{massiv[index]} ");
     }
 }
-FillArray(massiv);
+FillArray();
 
 Console.WriteLine();
 
