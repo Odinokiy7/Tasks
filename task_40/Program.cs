@@ -2,19 +2,22 @@
 
 Console.Clear();
 
-int[] massiv = new int[10];
+double[] massiv = new double[10];
 Random number = new Random();
 
 Console.Write("Дан массив: ");
-for (int i = 0; i < 10; i++)
+for (int i = 0; i < massiv.Length; i++)
 {
-    massiv[i] = number.Next(100, 1000);
+    //massiv[i] = number.NextDouble() * 100; 
+    massiv[i] = Math.Round(number.NextDouble()*100, 2);
     Console.Write($"{massiv[i]} ");
 }
+
+Console.WriteLine();
 Console.WriteLine();
 
-int max = massiv[0];
-int min = massiv[0];
+double max = 0;
+double min = 0;
 
 for (int i = 0; i < massiv.Length; i++)
 {
@@ -33,5 +36,7 @@ for (int j = 0; j < massiv.Length; j++)
 }
 Console.WriteLine($"Минимальный элемент массива = {min}");
 
-int sum = max - min;
-Console.WriteLine($"Разница между {max} и {min} = {sum}");
+Console.WriteLine();
+
+double sum = max - min;
+Console.WriteLine($"Разница между ними = {sum}");
