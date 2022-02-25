@@ -3,7 +3,6 @@
 Console.Clear();
 int[,] array = new int[10, 10];
 Random number = new Random();
-Console.WriteLine("Дан массив: ");
 void FillArray()
 {
     for (int i = 0; i < array.GetLength(0); i++)
@@ -39,7 +38,7 @@ int[,] MethodSum()
     }
     return array;
 }
-
+Console.WriteLine("Дан массив: ");
 FillArray();
 PrintArray(array);
 Console.WriteLine("Четные элементы заменены на противоположные числа:");
