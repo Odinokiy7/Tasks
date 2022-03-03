@@ -10,7 +10,7 @@ void FillArray()
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i, j] = number.Next(1, 10);
+            array[i, j] = number.Next(100, 1000);
         }
     }
 }
@@ -62,6 +62,6 @@ void PrintResultArray(int str, int colum)
 Console.WriteLine("Дан массив:");
 FillArray();
 PrintArray(array);
-Console.Write("Удалены строка и столбец, на пересечении которых расположен наименьший элемент.");
+Console.WriteLine("Удалены строка и столбец, на пересечении которых расположен наименьший элемент.");
 (int minString, int minColum) = FindMin();
 PrintResultArray(minString, minColum);
